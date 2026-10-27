@@ -1,0 +1,133 @@
+name: homefinder
+
+# Shared by app, horizon and scheduler; the image itself is built once, by the app service.
+x-php: &php
+  image: homefinder/php:8.3
+  environment:
+    # .env addresses the services from the host; inside the network they are reached by service name.
+    DB_HOST: postgres
+    DB_PORT: "5432"
+    REDIS_HOST: redis
+    REDIS_PORT: "6379"
+    # Laravel posts broadcast events to Reverb directly; browsers reach it through nginx on the app's port.
+    REVERB_HOST: reverb
+    REVERB_PORT: "8080"
+    APP_INTERNAL_URL: http://nginx
+  volumes:
+    - .:/var/www/html
+  depends_on:
+    postgres:
+      condition: service_healthy
+    redis:
+      condition: service_healthy
+  restart: unless-stopped
+
+services:
+  app:
+    <<: *php
+    build:
+      context: docker/php
+      args:
+        WWWUSER: ${WWWUSER:-1000}
+        WWWGROUP: ${WWWGROUP:-1000}
+
+  horizon:
+    <<: *php
+    command: ["php", "artisan", "horizon"]
+
+  scheduler:
+    <<: *php
+    command: ["php", "artisan", "schedule:work"]
+
+  # Websockets of the sales cabinet: the shared chat hears of new messages and taken conversations at once.
+  reverb:
+    <<: *php
+    command: ["php", "artisan", "reverb:start", "--host=0.0.0.0", "--port=8080"]
+
+  nginx:
+    image: nginx:1.30-alpine
+    ports:
+      - "${APP_PORT:-8080}:80"
+    volumes:
+      - .:/var/www/html:ro
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - app
+    restart: unless-stopped
+
+  # Search and the agent; reads the catalog database, writes through Laravel's API.
+  agent:
+    build:
+      context: agent
+      dockerfile: ../docker/agent/Dockerfile
+    image: homefinder/agent:latest
+    command: ["uvicorn", "homefinder.api:create_app", "--factory", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+    environment:
+      AGENT_DATABASE_URL: postgresql://${DB_USERNAME:-homefinder}:${DB_PASSWORD:-secret}@postgres:5432/${DB_DATABASE:-homefinder}
+      # The service refuses to start without a token of 16 characters or more.
+      AGENT_TOKEN: ${AGENT_TOKEN:-}
+      # Ollama runs on the host: Docker on a Mac has no access to the GPU.
+      AGENT_LLM_API_BASE: ${AGENT_LLM_API_BASE:-http://host.docker.internal:11434}
+      # The reranker runs on the host like Ollama (Metal is ten times faster than Docker's CPU on a Mac);
+      # on a Linux server start the `reranker` profile and point this at http://reranker:8080.
+      AGENT_RERANKER_URL: ${AGENT_RERANKER_URL:-http://host.docker.internal:8090}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "127.0.0.1:${AGENT_PORT:-8000}:8000"
+    volumes:
+      - ./agent:/app
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+
+  # bge-reranker-v2-m3 for the knowledge base search, for servers without a GPU: `docker compose --profile
+  # reranker up -d`. Ollama cannot rerank. The weights (636 MB) come from Hugging Face on the first start.
+  reranker:
+    profiles: ["reranker"]
+    image: ghcr.io/ggml-org/llama.cpp:server-b11312
+    command: ["-hf", "gpustack/bge-reranker-v2-m3-GGUF:Q8_0", "--reranking", "--host", "0.0.0.0", "--port", "8080"]
+    environment:
+      LLAMA_CACHE: /models
+    ports:
+      - "127.0.0.1:${RERANKER_PORT:-8090}:8080"
+    volumes:
+      - reranker-models:/models
+    restart: unless-stopped
+
+  postgres:
+    build: docker/postgres
+    image: homefinder/postgres:16
+    environment:
+      POSTGRES_DB: ${DB_DATABASE:-homefinder}
+      POSTGRES_USER: ${DB_USERNAME:-homefinder}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-secret}
+    ports:
+      - "127.0.0.1:${DB_PORT:-5432}:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready --username=\"$$POSTGRES_USER\" --dbname=\"$$POSTGRES_DB\""]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  redis:
+    image: redis:7.4-alpine
+    ports:
+      - "127.0.0.1:${REDIS_PORT:-6379}:6379"
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+volumes:
+  postgres-data:
+  redis-data:
+  reranker-models:

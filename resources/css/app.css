@@ -1,0 +1,109 @@
+@layer theme, base, primevue, components, utilities;
+
+@import 'tailwindcss';
+@import 'maplibre-gl/dist/maplibre-gl.css';
+
+@source '../js/**/*.vue';
+@source '../js/**/*.ts';
+
+/* Tokens of the design system, the night theme: deep violet surfaces, light text, one violet for actions and a
+   lavender gradient for emphasis; Roboto on a 4px grid. The names are roles: `ink` is the text, `capsule` a surface
+   raised above the `page`, `accent` what the user acts on. */
+@theme {
+    --font-sans: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+
+    --color-page: #12101c;
+    --color-capsule: #1b1828;
+    --color-chip: #2a2640;
+    --color-line: #2c2840;
+    --color-ink: #f4f2fb;
+    --color-muted: #a7a3b8;
+    --color-accent: #7c4dff;
+    --color-accent-deep: #4a1fb8;
+    --color-lavender: #d9c8ff;
+    --color-indigo: #5b5bf0;
+    --color-amber: #e8913a;
+    --color-success: #2da334;
+    --color-danger: #de675a;
+    --color-info: #007aff;
+
+    --color-place-metro: #d93636;
+    --color-place-school: #007aff;
+    --color-place-kindergarten: #d0538f;
+    --color-place-park: #2da334;
+    --color-place-shop: #148a8e;
+
+    --shadow-raised: 0 2px 8px #0006;
+    --shadow-floating: 0 0 2px #0000003d, 0 4px 16px #0000003d;
+
+    --radius-pill: 46px;
+}
+
+@layer base {
+    html {
+        font-family: var(--font-sans);
+        color: var(--color-ink);
+        background: var(--color-page);
+        line-height: 1.5;
+        color-scheme: dark;
+    }
+
+    h1,
+    h2,
+    h3 {
+        line-height: 1.2;
+        font-weight: 700;
+    }
+}
+
+/* MapLibre draws its popups and buttons white; on the night page they follow the theme. Its stylesheet is
+   imported outside the layers, and unlayered rules beat layered ones: these stay unlayered too, inside the map. */
+.maplibregl-map {
+    .maplibregl-popup-content {
+        background: var(--color-capsule);
+        color: var(--color-ink);
+        border: 1px solid var(--color-line);
+        border-radius: 12px;
+        box-shadow: var(--shadow-floating);
+    }
+
+    .maplibregl-popup-tip {
+        display: none;
+    }
+
+    .maplibregl-ctrl-group {
+        background: var(--color-capsule);
+        border: 1px solid var(--color-line);
+    }
+
+    .maplibregl-ctrl-group button + button {
+        border-top-color: var(--color-line);
+    }
+
+    .maplibregl-ctrl-group button .maplibregl-ctrl-icon {
+        filter: invert(1);
+    }
+
+    .maplibregl-ctrl.maplibregl-ctrl-attrib,
+    .maplibregl-ctrl-attrib.maplibregl-compact {
+        background: var(--color-capsule);
+        color: var(--color-muted);
+    }
+
+    .maplibregl-ctrl-attrib-button {
+        filter: invert(1);
+    }
+
+    .maplibregl-ctrl-attrib a {
+        color: var(--color-muted);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}

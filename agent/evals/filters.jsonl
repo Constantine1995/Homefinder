@@ -1,0 +1,204 @@
+{"text": "студия", "filters": {"rooms": [0]}}
+{"text": "нужна однушка", "filters": {"rooms": [1]}}
+{"text": "ищу двухкомнатную квартиру", "filters": {"rooms": [2]}}
+{"text": "трёшка", "filters": {"rooms": [3]}}
+{"text": "трешку для семьи с двумя детьми", "filters": {"rooms": [3]}}
+{"text": "четырёхкомнатная есть?", "filters": {"rooms": [4]}}
+{"text": "евродвушка", "filters": {"rooms": [2], "is_euro": true}}
+{"text": "евротрешка", "filters": {"rooms": [3], "is_euro": true}}
+{"text": "евро-однушка", "filters": {"rooms": [1], "is_euro": true}}
+{"text": "студия или однушка", "filters": {"rooms": [0, 1]}}
+{"text": "однокомнатная или двухкомнатная", "filters": {"rooms": [1, 2]}}
+{"text": "от двух комнат", "filters": {"rooms": [2, 3, 4]}}
+{"text": "минимум трёшка", "filters": {"rooms": [3, 4]}}
+{"text": "многокомнатная квартира для большой семьи", "filters": {"rooms": [4]}}
+{"text": "2к квартира", "filters": {"rooms": [2]}}
+{"text": "3-к", "filters": {"rooms": [3]}}
+{"text": "двушка, только не евро, нужны две изолированные спальни", "filters": {"rooms": [2], "is_euro": false}, "wishes": true}
+{"text": "классическая планировка, однушка", "filters": {"rooms": [1], "is_euro": false}}
+{"text": "квартира с кухней-гостиной и двумя спальнями", "filters": {"rooms": [3], "is_euro": true}}
+{"text": "что-нибудь в евроформате", "filters": {"is_euro": true}}
+{"text": "однушку или студию до 7 млн", "filters": {"rooms": [0, 1], "price_to": 7000000}}
+{"text": "Здравствуйте! Подскажите, есть ли у вас двушки?", "filters": {"rooms": [2]}}
+{"text": "4 комнаты или больше", "filters": {"rooms": [4]}}
+{"text": "пятикомнатная", "filters": {"rooms": [4]}}
+{"text": "двушка или трёшка", "filters": {"rooms": [2, 3]}}
+{"text": "до 9 млн", "filters": {"price_to": 9000000}}
+{"text": "до 9 лямов", "filters": {"price_to": 9000000}}
+{"text": "не дороже 12 миллионов", "filters": {"price_to": 12000000}}
+{"text": "бюджет 15 млн", "filters": {"price_to": 15000000}}
+{"text": "в пределах 10 млн рублей", "filters": {"price_to": 10000000}}
+{"text": "от 7 до 9 млн", "filters": {"price_from": 7000000, "price_to": 9000000}}
+{"text": "от 20 миллионов", "filters": {"price_from": 20000000}}
+{"text": "12,5 млн максимум", "filters": {"price_to": 12500000}}
+{"text": "до 8.5 млн", "filters": {"price_to": 8500000}}
+{"text": "однушка до 6 лямов", "filters": {"rooms": [1], "price_to": 6000000}}
+{"text": "двушка не дороже 11 млн", "filters": {"rooms": [2], "price_to": 11000000}}
+{"text": "трешка до 18 млн", "filters": {"rooms": [3], "price_to": 18000000}}
+{"text": "есть что-нибудь до 5 миллионов?", "filters": {"price_to": 5000000}}
+{"text": "студия до 6,2 млн", "filters": {"rooms": [0], "price_to": 6200000}}
+{"text": "рассматриваю варианты от 9 до 11 млн", "filters": {"price_from": 9000000, "price_to": 11000000}}
+{"text": "у меня 14 миллионов, что можно купить?", "filters": {"price_to": 14000000}}
+{"text": "денег до 10 млн, нужна двушка", "filters": {"rooms": [2], "price_to": 10000000}}
+{"text": "евродвушка до 9500000 рублей", "filters": {"rooms": [2], "is_euro": true, "price_to": 9500000}}
+{"text": "до 7 млн руб", "filters": {"price_to": 7000000}}
+{"text": "трешка от 30 млн", "filters": {"rooms": [3], "price_from": 30000000}}
+{"text": "дешевле 8 миллионов", "filters": {"price_to": 8000000}}
+{"text": "максимум 13 лямов", "filters": {"price_to": 13000000}}
+{"text": "бюджет от 6 до 8", "filters": {"price_from": 6000000, "price_to": 8000000}}
+{"text": "ищу недорогую студию до 5,5 млн", "filters": {"rooms": [0], "price_to": 5500000}}
+{"text": "до 10 млн с учётом ипотеки", "filters": {"price_to": 10000000}}
+{"text": "нужна квартира за 9 млн", "filters": {"price_to": 9000000}}
+{"text": "двушка в пределах 12 миллионов рублей", "filters": {"rooms": [2], "price_to": 12000000}}
+{"text": "не больше 16 млн", "filters": {"price_to": 16000000}}
+{"text": "от 11 млн и выше", "filters": {"price_from": 11000000}}
+{"text": "от 50 квадратов", "filters": {"area_from": 50}}
+{"text": "не меньше 40 метров", "filters": {"area_from": 40}}
+{"text": "площадь от 60 до 80 м²", "filters": {"area_from": 60, "area_to": 80}}
+{"text": "до 35 квадратов", "filters": {"area_to": 35}}
+{"text": "двушка от 55 метров", "filters": {"rooms": [2], "area_from": 55}}
+{"text": "трешка не меньше 75 кв.м", "filters": {"rooms": [3], "area_from": 75}}
+{"text": "студия от 25 м2", "filters": {"rooms": [0], "area_from": 25}}
+{"text": "квартира 45-50 квадратов", "filters": {"area_from": 45, "area_to": 50}}
+{"text": "площадью не более 70 метров", "filters": {"area_to": 70}}
+{"text": "однушка хотя бы 38 метров", "filters": {"rooms": [1], "area_from": 38}}
+{"text": "большая квартира от 100 квадратов", "filters": {"area_from": 100}}
+{"text": "до 60 метров и до 10 млн", "filters": {"area_to": 60, "price_to": 10000000}}
+{"text": "от 42 м² до 9 лямов", "filters": {"area_from": 42, "price_to": 9000000}}
+{"text": "евродвушка от 40 до 50 метров", "filters": {"rooms": [2], "is_euro": true, "area_from": 40, "area_to": 50}}
+{"text": "метров 60 минимум", "filters": {"area_from": 60}}
+{"text": "не первый этаж", "filters": {"not_first_floor": true}}
+{"text": "не последний этаж", "filters": {"not_last_floor": true}}
+{"text": "не первый и не последний", "filters": {"not_first_floor": true, "not_last_floor": true}}
+{"text": "выше 5 этажа", "filters": {"floor_from": 6}}
+{"text": "с 10 этажа и выше", "filters": {"floor_from": 10}}
+{"text": "до 4 этажа", "filters": {"floor_to": 4}}
+{"text": "этаж от 3 до 8", "filters": {"floor_from": 3, "floor_to": 8}}
+{"text": "однушка не на первом этаже", "filters": {"rooms": [1], "not_first_floor": true}}
+{"text": "двушка, этаж не ниже седьмого", "filters": {"rooms": [2], "floor_from": 7}}
+{"text": "первый этаж не предлагать", "filters": {"not_first_floor": true}}
+{"text": "только не последний этаж, крыша может течь", "filters": {"not_last_floor": true}}
+{"text": "невысоко, не выше 3 этажа", "filters": {"floor_to": 3}}
+{"text": "трёшка выше 15 этажа", "filters": {"rooms": [3], "floor_from": 16}}
+{"text": "хочу высокий этаж и вид на город", "filters": {}, "wishes": true}
+{"text": "студия, 2-5 этаж", "filters": {"rooms": [0], "floor_from": 2, "floor_to": 5}}
+{"text": "сдача не позже 2027", "filters": {"deadline_to": "2027-12-31"}}
+{"text": "сдача в 2026 году", "filters": {"deadline_to": "2026-12-31"}}
+{"text": "до конца 2028", "filters": {"deadline_to": "2028-12-31"}}
+{"text": "чтобы сдали до середины 2027", "filters": {"deadline_to": "2027-06-30"}}
+{"text": "срок сдачи первый квартал 2027", "filters": {"deadline_to": "2027-03-31"}}
+{"text": "сдача в этом году", "filters": {"deadline_to": "2026-12-31"}}
+{"text": "дом должны сдать в следующем году", "filters": {"deadline_to": "2027-12-31"}}
+{"text": "нужно готовое жильё", "filters": {"deadline_to": "2026-10-20"}}
+{"text": "только сданные дома", "filters": {"deadline_to": "2026-10-20"}}
+{"text": "хочу въехать сразу, ключи сразу после сделки", "filters": {"deadline_to": "2026-10-20"}}
+{"text": "двушка со сдачей до 2027", "filters": {"rooms": [2], "deadline_to": "2027-12-31"}}
+{"text": "трёшка, сдача в третьем квартале 2027", "filters": {"rooms": [3], "deadline_to": "2027-09-30"}}
+{"text": "ввод в эксплуатацию не позднее 4 квартала 2026", "filters": {"deadline_to": "2026-12-31"}}
+{"text": "однушка, срок сдачи 2028", "filters": {"rooms": [1], "deadline_to": "2028-12-31"}}
+{"text": "чтобы дом был готов к лету 2027", "filters": {"deadline_to": "2027-06-30"}}
+{"text": "в готовом доме до 12 млн", "filters": {"price_to": 12000000, "deadline_to": "2026-10-20"}}
+{"text": "сдача до конца следующего года, двушка", "filters": {"rooms": [2], "deadline_to": "2027-12-31"}}
+{"text": "студия, сдача 2 квартал 2028", "filters": {"rooms": [0], "deadline_to": "2028-06-30"}}
+{"text": "не позже 2029 года", "filters": {"deadline_to": "2029-12-31"}}
+{"text": "ключи в 2027", "filters": {"deadline_to": "2027-12-31"}}
+{"text": "до метро пешком", "filters": {"metro_walk_to": 15}}
+{"text": "рядом с метро", "filters": {"metro_walk_to": 15}}
+{"text": "10 минут до метро", "filters": {"metro_walk_to": 10}}
+{"text": "не больше 5 минут пешком от метро", "filters": {"metro_walk_to": 5}}
+{"text": "в шаговой доступности от метро", "filters": {"metro_walk_to": 15}}
+{"text": "у метро, однушка", "filters": {"rooms": [1], "metro_walk_to": 15}}
+{"text": "двушка до 10 млн, до метро минут 7", "filters": {"rooms": [2], "price_to": 10000000, "metro_walk_to": 7}}
+{"text": "чтобы до станции метро было не больше 20 минут пешком", "filters": {"metro_walk_to": 20}}
+{"text": "метро в пешей доступности", "filters": {"metro_walk_to": 15}}
+{"text": "работаю в центре, нужно метро рядом", "filters": {"metro_walk_to": 15}}
+{"text": "до метро не более 12 минут", "filters": {"metro_walk_to": 12}}
+{"text": "студия возле метро до 7 млн", "filters": {"rooms": [0], "price_to": 7000000, "metro_walk_to": 15}}
+{"text": "без машины, так что метро пешком обязательно", "filters": {"metro_walk_to": 15}}
+{"text": "15 минут до метро максимум", "filters": {"metro_walk_to": 15}}
+{"text": "трёшка, метро в 10 минутах", "filters": {"rooms": [3], "metro_walk_to": 10}}
+{"text": "рядом школа", "filters": {"nearby": ["school"]}}
+{"text": "чтобы рядом был детский сад", "filters": {"nearby": ["kindergarten"]}}
+{"text": "рядом школа и садик", "filters": {"nearby": ["school", "kindergarten"]}}
+{"text": "рядом парк", "filters": {"nearby": ["park"]}}
+{"text": "возле парка, гулять с собакой", "filters": {"nearby": ["park"]}}
+{"text": "магазины рядом", "filters": {"nearby": ["shop"]}}
+{"text": "чтобы супермаркет был в шаговой доступности", "filters": {"nearby": ["shop"]}}
+{"text": "у нас двое детей, нужны школа и детсад поблизости", "filters": {"nearby": ["school", "kindergarten"]}}
+{"text": "трешка рядом со школой", "filters": {"rooms": [3], "nearby": ["school"]}}
+{"text": "однушка, рядом парк и магазины", "filters": {"rooms": [1], "nearby": ["park", "shop"]}}
+{"text": "хочу вид на парк из окна", "filters": {}, "wishes": true}
+{"text": "двушка с видом на парк до 11 млн", "filters": {"rooms": [2], "price_to": 11000000}, "wishes": true}
+{"text": "чтобы садик был во дворе или рядом", "filters": {"nearby": ["kindergarten"]}}
+{"text": "рядом зелень, парк, тихо", "filters": {"nearby": ["park"]}, "wishes": true}
+{"text": "школа рядом и метро пешком", "filters": {"nearby": ["school"], "metro_walk_to": 15}}
+{"text": "с отделкой", "filters": {"finishings": ["finished", "furnished"]}}
+{"text": "без отделки", "filters": {"finishings": ["rough"]}}
+{"text": "черновая отделка, сделаю ремонт сам", "filters": {"finishings": ["rough"]}}
+{"text": "white box", "filters": {"finishings": ["white_box"]}}
+{"text": "предчистовая отделка", "filters": {"finishings": ["white_box"]}}
+{"text": "вайтбокс до 9 млн", "filters": {"finishings": ["white_box"], "price_to": 9000000}}
+{"text": "чистовая", "filters": {"finishings": ["finished"]}}
+{"text": "под ключ, с мебелью", "filters": {"finishings": ["furnished"]}}
+{"text": "квартира с ремонтом, чтобы сразу заехать", "filters": {"finishings": ["finished", "furnished"]}}
+{"text": "однушка под ключ", "filters": {"rooms": [1], "finishings": ["furnished"]}}
+{"text": "двушка с чистовой отделкой", "filters": {"rooms": [2], "finishings": ["finished"]}}
+{"text": "без ремонта, бетон", "filters": {"finishings": ["rough"]}}
+{"text": "студия с мебелью для сдачи в аренду", "filters": {"rooms": [0], "finishings": ["furnished"]}}
+{"text": "предчистовая или чистовая", "filters": {"finishings": ["white_box", "finished"]}}
+{"text": "отделка обязательна, без отделки не надо", "filters": {"finishings": ["finished", "furnished"]}}
+{"text": "что есть в Отрадном квартале?", "filters": {"complexes": ["Отрадный квартал"]}}
+{"text": "ЖК Речная терраса", "filters": {"complexes": ["Речная терраса"]}}
+{"text": "двушка в Тёплых холмах", "filters": {"complexes": ["Тёплые холмы"], "rooms": [2]}}
+{"text": "в теплых холмах студии есть?", "filters": {"complexes": ["Тёплые холмы"], "rooms": [0]}}
+{"text": "Речная терраса или Отрадный квартал, трёшка", "filters": {"complexes": ["Речная терраса", "Отрадный квартал"], "rooms": [3]}}
+{"text": "в Речной террасе до 15 млн", "filters": {"complexes": ["Речная терраса"], "price_to": 15000000}}
+{"text": "отрадный квартал однушка до 8 лямов", "filters": {"complexes": ["Отрадный квартал"], "rooms": [1], "price_to": 8000000}}
+{"text": "ЖК «Тёплые холмы», сданный корпус", "filters": {"complexes": ["Тёплые холмы"], "deadline_to": "2026-10-20"}}
+{"text": "а в Речной терассе евродвушки есть?", "filters": {"complexes": ["Речная терраса"], "rooms": [2], "is_euro": true}}
+{"text": "интересует Отрадный, двушка с отделкой", "filters": {"complexes": ["Отрадный квартал"], "rooms": [2], "finishings": ["finished", "furnished"]}}
+{"text": "Тёплые холмы, от 60 метров", "filters": {"complexes": ["Тёплые холмы"], "area_from": 60}}
+{"text": "что-нибудь в ЖК Солнечный город?", "filters": {}, "unknown_complexes": true}
+{"text": "в Отрадном квартале не первый этаж", "filters": {"complexes": ["Отрадный квартал"], "not_first_floor": true}}
+{"text": "двушки в Речной Террасе со сдачей в 2027", "filters": {"complexes": ["Речная терраса"], "rooms": [2], "deadline_to": "2027-12-31"}}
+{"text": "холмы тёплые, трешка", "filters": {"complexes": ["Тёплые холмы"], "rooms": [3]}}
+{"text": "светлая квартира с окнами на юг", "filters": {}, "wishes": true}
+{"text": "тихий двор, без машин", "filters": {}, "wishes": true}
+{"text": "двушка с большой кухней", "filters": {"rooms": [2]}, "wishes": true}
+{"text": "обязательно балкон или лоджия", "filters": {}, "wishes": true}
+{"text": "однушка, чтобы окна во двор", "filters": {"rooms": [1]}, "wishes": true}
+{"text": "с видом на реку", "filters": {}, "wishes": true}
+{"text": "высокие потолки и панорамные окна", "filters": {}, "wishes": true}
+{"text": "трешка с гардеробной и двумя санузлами", "filters": {"rooms": [3]}, "wishes": true}
+{"text": "солнечная сторона, до 10 млн", "filters": {"price_to": 10000000}, "wishes": true}
+{"text": "чтобы было тихо и окна не на дорогу", "filters": {}, "wishes": true}
+{"text": "студия с видом на Москву-реку", "filters": {"rooms": [0]}, "wishes": true}
+{"text": "раздельный санузел обязательно", "filters": {}, "wishes": true}
+{"text": "евродвушка с террасой", "filters": {"rooms": [2], "is_euro": true}, "wishes": true}
+{"text": "что у вас есть?", "filters": {}}
+{"text": "здравствуйте, хочу купить квартиру", "filters": {}}
+{"text": "какие есть варианты в ипотеку?", "filters": {}}
+{"text": "двушка до 9 млн, до метро пешком, сдача не позже 2027", "filters": {"rooms": [2], "price_to": 9000000, "metro_walk_to": 15, "deadline_to": "2027-12-31"}}
+{"text": "евродвушка до 9 лямов, не первый этаж", "filters": {"rooms": [2], "is_euro": true, "price_to": 9000000, "not_first_floor": true}}
+{"text": "Здравствуйте! Ищем трёшку для семьи, бюджет до 16 млн, обязательно рядом школа и садик, сдача не позже конца 2027 года", "filters": {"rooms": [3], "price_to": 16000000, "nearby": ["school", "kindergarten"], "deadline_to": "2027-12-31"}}
+{"text": "однушка или студия до 7 млн рядом с метро, с отделкой", "filters": {"rooms": [0, 1], "price_to": 7000000, "metro_walk_to": 15, "finishings": ["finished", "furnished"]}}
+{"text": "двушка от 50 метров, этаж с 5-го, до 12 млн", "filters": {"rooms": [2], "area_from": 50, "floor_from": 5, "price_to": 12000000}}
+{"text": "нужна трешка в готовом доме, не последний этаж, до 20 миллионов", "filters": {"rooms": [3], "deadline_to": "2026-10-20", "not_last_floor": true, "price_to": 20000000}}
+{"text": "студия под ключ до 6,5 млн для сдачи, метро 10 минут", "filters": {"rooms": [0], "finishings": ["furnished"], "price_to": 6500000, "metro_walk_to": 10}}
+{"text": "евротрёшка от 65 квадратов с видом на парк, бюджет 14", "filters": {"rooms": [3], "is_euro": true, "area_from": 65, "price_to": 14000000}, "wishes": true}
+{"text": "Двушку в Тёплых холмах, не первый этаж, сдача в 2026, с предчистовой", "filters": {"complexes": ["Тёплые холмы"], "rooms": [2], "not_first_floor": true, "deadline_to": "2026-12-31", "finishings": ["white_box"]}}
+{"text": "ищу квартиру от 2 комнат до 13 млн, парк рядом", "filters": {"rooms": [2, 3, 4], "price_to": 13000000, "nearby": ["park"]}}
+{"text": "однушка 35-40 метров до 8 млн, не первый и не последний этаж", "filters": {"rooms": [1], "area_from": 35, "area_to": 40, "price_to": 8000000, "not_first_floor": true, "not_last_floor": true}}
+{"text": "двухкомнатная без отделки до 10 млн в Речной террасе", "filters": {"rooms": [2], "finishings": ["rough"], "price_to": 10000000, "complexes": ["Речная терраса"]}}
+{"text": "трёшка, школа рядом, до метро 15 минут, от 80 метров", "filters": {"rooms": [3], "nearby": ["school"], "metro_walk_to": 15, "area_from": 80}}
+{"text": "евродвушка, светлая, с балконом, до 11 млн, сдача до середины 2027", "filters": {"rooms": [2], "is_euro": true, "price_to": 11000000, "deadline_to": "2027-06-30"}, "wishes": true}
+{"text": "студия до 6 млн, первый этаж не нужен, магазины рядом", "filters": {"rooms": [0], "price_to": 6000000, "not_first_floor": true, "nearby": ["shop"]}}
+{"text": "хочу двушку или трешку от 9 до 14 млн в Отрадном квартале", "filters": {"rooms": [2, 3], "price_from": 9000000, "price_to": 14000000, "complexes": ["Отрадный квартал"]}}
+{"text": "4-комнатная от 100 метров, чистовая, этаж выше 10", "filters": {"rooms": [4], "area_from": 100, "finishings": ["finished"], "floor_from": 11}}
+{"text": "у метро, рядом парк, однушка до 9 лямов, тихий двор", "filters": {"metro_walk_to": 15, "nearby": ["park"], "rooms": [1], "price_to": 9000000}, "wishes": true}
+{"text": "молодая семья, семейная ипотека, нужна двушка до 10 млн, садик рядом", "filters": {"rooms": [2], "price_to": 10000000, "nearby": ["kindergarten"]}}
+{"text": "до 12 млн, от 45 метров, сдача в следующем году, отделка любая", "filters": {"price_to": 12000000, "area_from": 45, "deadline_to": "2027-12-31"}}
+{"text": "Тёплые холмы или Речная терраса, евродвушка до 10 млн, метро пешком", "filters": {"complexes": ["Тёплые холмы", "Речная терраса"], "rooms": [2], "is_euro": true, "price_to": 10000000, "metro_walk_to": 15}}
+{"text": "трёшку до 25 млн с видом на реку и двумя санузлами", "filters": {"rooms": [3], "price_to": 25000000}, "wishes": true}
+{"text": "двушка рядом с Тютчевской до 10 млн", "filters": {"rooms": [2], "price_to": 10000000, "metro_walk_to": 15}}
+{"text": "семья из четырёх человек, хотели трёшку до 10 млн", "filters": {"rooms": [3], "price_to": 10000000}}

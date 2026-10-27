@@ -1,0 +1,57 @@
+[project]
+name = "homefinder"
+version = "0.1.0"
+description = "Search and agent service of HomeFinder: free-text flat search for the developer's buyers"
+authors = [
+    { name = "Constantine" }
+]
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "fastapi>=0.150.0",
+    "httpx>=0.28.1",
+    "langgraph>=1.2.16",
+    "litellm>=1.106.0",
+    "psycopg[binary,pool]>=3.3.6",
+    "pydantic>=2.14.1",
+    "pydantic-settings>=2.16.0",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.13,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=2.4.0",
+    "pytest>=9.1.1",
+    "ruff>=0.17.1",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "B", "UP", "SIM", "RUF", "ASYNC", "PT", "N"]
+# Buyers write in Russian: Cyrillic letters that look like Latin ones are expected in strings and docstrings.
+ignore = ["RUF001", "RUF002", "RUF003"]
+
+[tool.mypy]
+strict = true
+plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+module = ["litellm", "litellm.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--strict-markers"
+filterwarnings = [
+    # LiteLLM's own types; nothing in this service mutates them.
+    "ignore:Item 'summary' on TypedDict class 'ChatCompletionReasoningItem':UserWarning",
+]
+markers = [
+    "llm: needs a running model server (Ollama); skipped unless AGENT_RUN_LLM_TESTS=1",
+]

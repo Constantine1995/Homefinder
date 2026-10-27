@@ -1,0 +1,345 @@
+{
+  "model": "ollama_chat/qwen2.5:7b",
+  "date": "2026-10-22T09:41:17+00:00",
+  "threshold": -4.5,
+  "questions": 115,
+  "recall_at_5": 0.9588,
+  "target": 0.9,
+  "abstained_without_answer": 1.0,
+  "rewritten": 20,
+  "seconds_median": 0.58,
+  "thresholds": [
+    {
+      "threshold": -4.0,
+      "recall_at_5": 0.9794,
+      "abstained": 0.8333
+    },
+    {
+      "threshold": -3.0,
+      "recall_at_5": 0.9175,
+      "abstained": 0.9444
+    },
+    {
+      "threshold": -2.0,
+      "recall_at_5": 0.8144,
+      "abstained": 1.0
+    },
+    {
+      "threshold": -1.0,
+      "recall_at_5": 0.7835,
+      "abstained": 1.0
+    },
+    {
+      "threshold": -0.5,
+      "recall_at_5": 0.7526,
+      "abstained": 1.0
+    },
+    {
+      "threshold": 0.0,
+      "recall_at_5": 0.701,
+      "abstained": 1.0
+    },
+    {
+      "threshold": 0.5,
+      "recall_at_5": 0.6598,
+      "abstained": 1.0
+    },
+    {
+      "threshold": 1.0,
+      "recall_at_5": 0.5876,
+      "abstained": 1.0
+    },
+    {
+      "threshold": 2.0,
+      "recall_at_5": 0.4742,
+      "abstained": 1.0
+    }
+  ],
+  "misses": [
+    {
+      "question": "Как быстро одобряют ипотеку?",
+      "complex": null,
+      "expected": [
+        [
+          "mortgage",
+          "Банки-партнёры"
+        ]
+      ],
+      "answerable": true,
+      "found": true,
+      "hit": false,
+      "rewritten": null,
+      "results": [
+        [
+          "buying",
+          "Сроки сделки",
+          0.945
+        ]
+      ],
+      "ranked": [
+        [
+          "buying",
+          "Сроки сделки",
+          0.945
+        ],
+        [
+          "mortgage",
+          "Банки-партнёры",
+          -1.48
+        ],
+        [
+          "documents",
+          "Аккредитация банками",
+          -3.775
+        ],
+        [
+          "mortgage",
+          "Стандартная ипотека",
+          -6.597
+        ],
+        [
+          "mortgage",
+          "Семейная ипотека",
+          -6.613
+        ],
+        [
+          "buying",
+          "Бронирование",
+          -6.766
+        ],
+        [
+          "mortgage",
+          "IT-ипотека",
+          -7.192
+        ],
+        [
+          "mortgage",
+          "Материнский капитал",
+          -7.203
+        ],
+        [
+          "buying",
+          "Способы оплаты",
+          -7.368
+        ],
+        [
+          "mortgage",
+          "Ипотека с субсидией застройщика",
+          -8.403
+        ]
+      ],
+      "seconds": 0.51
+    },
+    {
+      "question": "у нас ребёнку 4 года, подойдёт семейная?",
+      "complex": null,
+      "expected": [
+        [
+          "mortgage",
+          "Семейная ипотека"
+        ]
+      ],
+      "answerable": true,
+      "found": false,
+      "hit": false,
+      "rewritten": "для ребёнка 4 года подходит семейный паркинг",
+      "results": [],
+      "ranked": [
+        [
+          "mortgage",
+          "Семейная ипотека",
+          -2.407
+        ],
+        [
+          "mortgage",
+          "Стандартная ипотека",
+          -6.112
+        ],
+        [
+          "river-terrace",
+          "Паркинг",
+          -8.793
+        ],
+        [
+          "about",
+          "Как записаться на просмотр",
+          -9.758
+        ],
+        [
+          "warm-hills",
+          "Школа и детские сады",
+          -10.258
+        ],
+        [
+          "otradny",
+          "Паркинг и кладовые",
+          -10.422
+        ],
+        [
+          "river-terrace",
+          "Корпуса и сроки сдачи",
+          -10.767
+        ],
+        [
+          "otradny",
+          "Корпуса и сроки сдачи",
+          -10.785
+        ],
+        [
+          "warm-hills",
+          "Корпуса и сроки сдачи",
+          -10.832
+        ],
+        [
+          "about",
+          "Кто мы",
+          -10.839
+        ]
+      ],
+      "seconds": 5.86
+    },
+    {
+      "question": "Чем хороша Речная терраса?",
+      "complex": null,
+      "expected": [
+        [
+          "river-terrace",
+          "О комплексе"
+        ]
+      ],
+      "answerable": true,
+      "found": true,
+      "hit": false,
+      "rewritten": null,
+      "results": [
+        [
+          "river-terrace",
+          "Инфраструктура",
+          -1.44
+        ]
+      ],
+      "ranked": [
+        [
+          "river-terrace",
+          "Инфраструктура",
+          -1.44
+        ],
+        [
+          "mortgage",
+          "Ипотека с субсидией застройщика",
+          -1.881
+        ],
+        [
+          "river-terrace",
+          "Безопасность и сервис",
+          -1.94
+        ],
+        [
+          "river-terrace",
+          "О комплексе",
+          -2.987
+        ],
+        [
+          "mortgage",
+          "Акции",
+          -3.198
+        ],
+        [
+          "river-terrace",
+          "Отделка",
+          -4.119
+        ],
+        [
+          "about",
+          "Шоурумы",
+          -4.621
+        ],
+        [
+          "about",
+          "Кто мы",
+          -4.735
+        ],
+        [
+          "river-terrace",
+          "Корпуса и сроки сдачи",
+          -5.729
+        ],
+        [
+          "river-terrace",
+          "Транспорт",
+          -6.742
+        ]
+      ],
+      "seconds": 17.08
+    },
+    {
+      "question": "Дома панельные или монолит?",
+      "complex": "Тёплые холмы",
+      "expected": [
+        [
+          "warm-hills",
+          "О комплексе"
+        ]
+      ],
+      "answerable": true,
+      "found": false,
+      "hit": false,
+      "rewritten": "панельные или монолитные дома",
+      "results": [],
+      "ranked": [
+        [
+          "documents",
+          "Разрешительная документация",
+          -7.998
+        ],
+        [
+          "buying",
+          "Приёмка квартиры и ключи",
+          -8.044
+        ],
+        [
+          "warm-hills",
+          "О комплексе",
+          -8.141
+        ],
+        [
+          "about",
+          "Кто мы",
+          -8.327
+        ],
+        [
+          "warm-hills",
+          "Отделка",
+          -8.542
+        ],
+        [
+          "mortgage",
+          "Банки-партнёры",
+          -8.818
+        ],
+        [
+          "buying",
+          "Договор долевого участия и эскроу",
+          -8.871
+        ],
+        [
+          "buying",
+          "Рассрочка застройщика",
+          -9.103
+        ],
+        [
+          "documents",
+          "Образец договора",
+          -9.203
+        ],
+        [
+          "buying",
+          "Способы оплаты",
+          -9.555
+        ]
+      ],
+      "seconds": 2.95
+    }
+  ],
+  "made_up": []
+}

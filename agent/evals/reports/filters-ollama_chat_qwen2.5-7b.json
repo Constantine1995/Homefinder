@@ -1,0 +1,244 @@
+{
+  "model": "ollama_chat/qwen2.5:7b",
+  "date": "2026-10-20T11:27:55+00:00",
+  "phrases": 202,
+  "field_accuracy": 0.958,
+  "target": 0.95,
+  "exact_match": 0.9307,
+  "wishes_detected": 0.9802,
+  "errors": 0,
+  "seconds_median": 1.58,
+  "fields": {
+    "complex_ids": {
+      "counted": 18,
+      "accuracy": 1.0
+    },
+    "rooms": {
+      "counted": 91,
+      "accuracy": 0.967
+    },
+    "is_euro": {
+      "counted": 15,
+      "accuracy": 0.8667
+    },
+    "price_from": {
+      "counted": 8,
+      "accuracy": 0.875
+    },
+    "price_to": {
+      "counted": 56,
+      "accuracy": 1.0
+    },
+    "area_from": {
+      "counted": 19,
+      "accuracy": 1.0
+    },
+    "area_to": {
+      "counted": 7,
+      "accuracy": 1.0
+    },
+    "floor_from": {
+      "counted": 8,
+      "accuracy": 1.0
+    },
+    "floor_to": {
+      "counted": 4,
+      "accuracy": 1.0
+    },
+    "not_first_floor": {
+      "counted": 9,
+      "accuracy": 1.0
+    },
+    "not_last_floor": {
+      "counted": 5,
+      "accuracy": 1.0
+    },
+    "deadline_to": {
+      "counted": 29,
+      "accuracy": 0.8966
+    },
+    "metro_walk_to": {
+      "counted": 22,
+      "accuracy": 0.9545
+    },
+    "nearby": {
+      "counted": 19,
+      "accuracy": 1.0
+    },
+    "finishings": {
+      "counted": 23,
+      "accuracy": 0.8261
+    }
+  },
+  "failures": [
+    {
+      "text": "минимум трёшка",
+      "wrong": {
+        "rooms": {
+          "expected": [
+            "3",
+            "4"
+          ],
+          "actual": [
+            "3"
+          ]
+        }
+      },
+      "wishes": null
+    },
+    {
+      "text": "2к квартира",
+      "wrong": {
+        "rooms": {
+          "expected": [
+            "2"
+          ],
+          "actual": [
+            "3"
+          ]
+        }
+      },
+      "wishes": null
+    },
+    {
+      "text": "квартира с кухней-гостиной и двумя спальнями",
+      "wrong": {
+        "finishings": {
+          "expected": [],
+          "actual": [
+            "finished",
+            "furnished"
+          ]
+        }
+      },
+      "wishes": null
+    },
+    {
+      "text": "двушка или трёшка",
+      "wrong": {
+        "rooms": {
+          "expected": [
+            "2",
+            "3"
+          ],
+          "actual": [
+            "1",
+            "3"
+          ]
+        }
+      },
+      "wishes": null
+    },
+    {
+      "text": "чтобы дом был готов к лету 2027",
+      "wrong": {
+        "deadline_to": {
+          "expected": "2027-06-30",
+          "actual": "2026-10-20"
+        }
+      },
+      "wishes": null
+    },
+    {
+      "text": "ключи в 2027",
+      "wrong": {
+        "deadline_to": {
+          "expected": "2027-12-31",
+          "actual": "2026-10-20"
+        }
+      },
+      "wishes": null
+    },
+    {
+      "text": "квартира с ремонтом, чтобы сразу заехать",
+      "wrong": {
+        "deadline_to": {
+          "expected": null,
+          "actual": "2026-10-20"
+        }
+      },
+      "wishes": null
+    },
+    {
+      "text": "предчистовая или чистовая",
+      "wrong": {
+        "finishings": {
+          "expected": [
+            "finished",
+            "white_box"
+          ],
+          "actual": [
+            "finished"
+          ]
+        }
+      },
+      "wishes": null
+    },
+    {
+      "text": "евродвушка с террасой",
+      "wrong": {
+        "finishings": {
+          "expected": [],
+          "actual": [
+            "finished",
+            "furnished"
+          ]
+        }
+      },
+      "wishes": null
+    },
+    {
+      "text": "евродвушка до 9 лямов, не первый этаж",
+      "wrong": {
+        "is_euro": {
+          "expected": true,
+          "actual": null
+        }
+      },
+      "wishes": null
+    },
+    {
+      "text": "однушка или студия до 7 млн рядом с метро, с отделкой",
+      "wrong": {
+        "metro_walk_to": {
+          "expected": 15,
+          "actual": null
+        }
+      },
+      "wishes": null
+    },
+    {
+      "text": "студия под ключ до 6,5 млн для сдачи, метро 10 минут",
+      "wrong": {
+        "finishings": {
+          "expected": [
+            "furnished"
+          ],
+          "actual": []
+        }
+      },
+      "wishes": null
+    },
+    {
+      "text": "евротрёшка от 65 квадратов с видом на парк, бюджет 14",
+      "wrong": {
+        "is_euro": {
+          "expected": true,
+          "actual": null
+        }
+      },
+      "wishes": "вид на парк"
+    },
+    {
+      "text": "ищу квартиру от 2 комнат до 13 млн, парк рядом",
+      "wrong": {
+        "price_from": {
+          "expected": null,
+          "actual": 2000000
+        }
+      },
+      "wishes": null
+    }
+  ],
+  "llm_errors": []
+}

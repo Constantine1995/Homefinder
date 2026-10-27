@@ -1,0 +1,191 @@
+{
+  "model": "ollama_chat/qwen3:8b",
+  "date": "2026-10-26T13:20:56+00:00",
+  "phrases": 204,
+  "field_accuracy": 0.9703,
+  "target": 0.95,
+  "exact_match": 0.9559,
+  "wishes_detected": 0.9804,
+  "errors": 0,
+  "seconds_median": 3.56,
+  "fields": {
+    "complex_ids": {
+      "counted": 18,
+      "accuracy": 1.0
+    },
+    "rooms": {
+      "counted": 93,
+      "accuracy": 0.9677
+    },
+    "is_euro": {
+      "counted": 15,
+      "accuracy": 1.0
+    },
+    "price_from": {
+      "counted": 7,
+      "accuracy": 1.0
+    },
+    "price_to": {
+      "counted": 58,
+      "accuracy": 1.0
+    },
+    "area_from": {
+      "counted": 19,
+      "accuracy": 1.0
+    },
+    "area_to": {
+      "counted": 7,
+      "accuracy": 1.0
+    },
+    "floor_from": {
+      "counted": 8,
+      "accuracy": 1.0
+    },
+    "floor_to": {
+      "counted": 4,
+      "accuracy": 1.0
+    },
+    "not_first_floor": {
+      "counted": 9,
+      "accuracy": 1.0
+    },
+    "not_last_floor": {
+      "counted": 5,
+      "accuracy": 1.0
+    },
+    "deadline_to": {
+      "counted": 29,
+      "accuracy": 0.8621
+    },
+    "metro_walk_to": {
+      "counted": 23,
+      "accuracy": 1.0
+    },
+    "nearby": {
+      "counted": 19,
+      "accuracy": 1.0
+    },
+    "finishings": {
+      "counted": 23,
+      "accuracy": 0.8696
+    }
+  },
+  "failures": [
+    {
+      "text": "минимум трёшка",
+      "wrong": {
+        "rooms": {
+          "expected": [
+            "3",
+            "4"
+          ],
+          "actual": [
+            "3"
+          ]
+        }
+      },
+      "wishes": null
+    },
+    {
+      "text": "чтобы дом был готов к лету 2027",
+      "wrong": {
+        "deadline_to": {
+          "expected": "2027-06-30",
+          "actual": "2026-10-20"
+        }
+      },
+      "wishes": null
+    },
+    {
+      "text": "сдача до конца следующего года, двушка",
+      "wrong": {
+        "deadline_to": {
+          "expected": "2027-12-31",
+          "actual": "2026-12-31"
+        }
+      },
+      "wishes": null
+    },
+    {
+      "text": "ключи в 2027",
+      "wrong": {
+        "deadline_to": {
+          "expected": "2027-12-31",
+          "actual": "2026-10-20"
+        }
+      },
+      "wishes": null
+    },
+    {
+      "text": "квартира с ремонтом, чтобы сразу заехать",
+      "wrong": {
+        "deadline_to": {
+          "expected": null,
+          "actual": "2026-10-20"
+        },
+        "finishings": {
+          "expected": [
+            "finished",
+            "furnished"
+          ],
+          "actual": [
+            "finished"
+          ]
+        }
+      },
+      "wishes": null
+    },
+    {
+      "text": "тихий двор, без машин",
+      "wrong": {
+        "finishings": {
+          "expected": [],
+          "actual": [
+            "rough"
+          ]
+        }
+      },
+      "wishes": "тихий двор"
+    },
+    {
+      "text": "трешка с гардеробной и двумя санузлами",
+      "wrong": {
+        "rooms": {
+          "expected": [
+            "3"
+          ],
+          "actual": []
+        }
+      },
+      "wishes": "с гардеробной, два санузла"
+    },
+    {
+      "text": "студия с видом на Москву-реку",
+      "wrong": {
+        "rooms": {
+          "expected": [
+            "0"
+          ],
+          "actual": []
+        }
+      },
+      "wishes": "вид на Москву-реку"
+    },
+    {
+      "text": "до 12 млн, от 45 метров, сдача в следующем году, отделка любая",
+      "wrong": {
+        "finishings": {
+          "expected": [],
+          "actual": [
+            "finished",
+            "furnished",
+            "rough",
+            "white_box"
+          ]
+        }
+      },
+      "wishes": null
+    }
+  ],
+  "llm_errors": []
+}
